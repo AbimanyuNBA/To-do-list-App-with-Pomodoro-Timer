@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1f48ff 40%, #721fc5 60%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 40px);
+}
+
+/* Kotak Kiri - Sidebar */
+.kotak-kiri {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.kotak-kiri input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.kotak-kiri input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.kotak-kiri h4 {
+    color: #666;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.kotak-kiri .list {
+    list-style: none;
+}
+
+.kotak-kiri .list li {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.kotak-kiri .list li:hover {
+    background: #f5f5f5;
+    transform: translateX(5px);
+}
+
+.kotak-kiri .list li:active {
+    background: #667eea;
+    color: white;
+}
+
+.kotak-kiri p {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: #333;
+    margin-top: auto;
+}
+
+.kotak-kiri p:hover {
+    background: #f5f5f5;
+}
+
+/* Kotak Tengah - Main Content */
+.kotak-tengah {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.kotak-tengah>div {
+    margin-bottom: 30px;
+}
+
+.kotak-tengah h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.kotak-tengah h4 {
+    color: #999;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.kotak-tengah h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.view-btn,
+.new-task-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.view-btn {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.view-btn:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.new-task-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.new-task-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.kotak-tengah label {
+    display: block;
+    margin: 10px 0;
+}
+
+.kotak-tengah input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #667eea;
+}
+
+.kotak-tengah span {
+    font-size: 16px;
+    color: #333;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.taskBtn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.taskBtn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+/* Kotak Kanan - Pomodoro Timer */
+.kotak-kanan {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.kotak-kanan h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.timer {
+    background: linear-gradient(135deg, #061f8f 0%, #8931e0 100%);
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.pomodoro-btn {
+    width: 48%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.pomodoro-btn {
+    background:linear-gradient(135deg, #4CAF50 0%, green 100%) ;
+    color: white;
+    margin-right: 4%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.pomodoro-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+
+}
+
+.pomodoro-btn1 {
+    width: 48%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+.pomodoro-btn1 {
+    background:linear-gradient(135deg, #f44336 0%, #a30827 100%  ) ;
+    color: white;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.pomodoro-btn1:hover {
+    background: #da190b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+}
+
+.pomodoro-btn2 {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+.pomodoro-btn2 {
+    background: linear-gradient(100deg,#4CAF50 0% , green 100%) ;
+    color: white;
+    margin-right: 4%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.pomodoro-btn2:hover {
+    background: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 2 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .kotak-kiri,
+    .kotak-kanan {
+        width: 100%;
+    }
+}
+
+/* Scrollbar Styling untuk Sidebar */
+.kotak-kiri::-webkit-scrollbar {
+    width: 6px;
+}
+
+.kotak-kiri::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.kotak-kiri::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
+
+.kotak-kiri::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
+
+/* Scrollbar Styling untuk Main Content */
+.kotak-tengah::-webkit-scrollbar {
+    width: 8px;
+}
+
+.kotak-tengah::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.kotak-tengah::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
+
+.kotak-tengah::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
