@@ -1,350 +1,356 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1f48ff 40%, #721fc5 60%);
-    min-height: 100vh;
-    padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 50%, #e0f2f1 100%);
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
-    display: flex;
-    gap: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    min-height: calc(100vh - 40px);
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr 350px;
+  gap: 20px;
 }
 
-/* Kotak Kiri - Sidebar */
 .kotak-kiri {
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
-    width: 280px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: fit-content;
-    max-height: calc(100vh - 40px);
-    overflow-y: auto;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  height: fit-content;
 }
 
 .kotak-kiri input[type="text"] {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    font-size: 14px;
-    transition: all 0.3s ease;
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 24px;
+  background: #f9fafb;
 }
 
 .kotak-kiri input[type="text"]:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+  border-color: #22c55e;
+  background: white;
 }
 
 .kotak-kiri h4 {
-    color: #666;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  margin-top: 24px;
 }
 
-.kotak-kiri .list {
-    list-style: none;
+.kotak-kiri h4:first-of-type {
+  margin-top: 0;
 }
 
-.kotak-kiri .list li {
-    padding: 10px 15px;
-    margin: 5px 0;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #333;
+.list {
+  list-style: none;
+  margin-bottom: 24px;
 }
 
-.kotak-kiri .list li:hover {
-    background: #f5f5f5;
-    transform: translateX(5px);
+.list li {
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 4px;
 }
 
-.kotak-kiri .list li:active {
-    background: #667eea;
-    color: white;
+.list li:hover {
+  background: #f3f4f6;
+  color: #1f2937;
 }
 
-.kotak-kiri p {
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    color: #333;
-    margin-top: auto;
+.list li:first-child {
+  background: #ecfdf5;
+  color: #22c55e;
+  font-weight: 500;
 }
 
-.kotak-kiri p:hover {
-    background: #f5f5f5;
+.kotak-kiri > p {
+  padding: 10px 12px;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: all 0.2s;
 }
 
-/* Kotak Tengah - Main Content */
+.kotak-kiri > p:hover {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
 .kotak-tengah {
-    flex: 1;
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.kotak-tengah>div {
-    margin-bottom: 30px;
+.kotak-tengah > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .kotak-tengah h1 {
-    color: #333;
-    font-size: 32px;
-    margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
 }
 
 .kotak-tengah h4 {
-    color: #999;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.kotak-tengah h3 {
-    color: #333;
-    font-size: 20px;
-    margin-bottom: 15px;
+  font-size: 14px;
+  color: #9ca3af;
+  font-weight: 400;
+  margin-bottom: 16px;
+  align-items: center;
 }
 
 .view-btn,
 .new-task-btn {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  margin-left: 8px;
 }
 
 .view-btn {
-    background: #f5f5f5;
-    color: #333;
-}
-
-.view-btn:hover {
-    background: #e0e0e0;
-    transform: translateY(-2px);
+  background: #f3f4f6;
+  color: #6b7280;
 }
 
 .new-task-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+  background:linear-gradient(150deg,  #22c55e 0% , rgb(62, 124, 62) 100%);
+  color: white;
 }
 
+.view-btn:hover,
 .new-task-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.kotak-tengah > div:nth-child(2),
+.kotak-tengah > div:nth-child(3) {
+  margin-bottom: 32px;
+}
+
+.kotak-tengah h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+  margin-top: 24px;
 }
 
 .kotak-tengah label {
-    display: block;
-    margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f3f4f6;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.kotak-tengah label:hover {
+  background: #f9fafb;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  border-radius: 8px;
 }
 
 .kotak-tengah input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-    accent-color: #667eea;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.kotak-tengah input[type="checkbox"]:hover {
+  border-color: #22c55e;
+}
+
+.kotak-tengah input[type="checkbox"]:checked {
+  background: #22c55e;
+  border-color: #22c55e;
+}
+
+.kotak-tengah input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .kotak-tengah span {
-    font-size: 16px;
-    color: #333;
-    vertical-align: middle;
-    margin-right: 20px;
+  flex: 1;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.kotak-tengah input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: #9ca3af;
 }
 
 .taskBtn {
-    padding: 10px 20px;
-    background: transparent;
-    border: 2px dashed #ccc;
-    border-radius: 8px;
-    color: #666;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
-    transition: all 0.3s ease;
+  color: #9ca3af;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: color 0.2s;
 }
 
 .taskBtn:hover {
-    border-color: #667eea;
-    color: #667eea;
-    background: rgba(102, 126, 234, 0.05);
+  color: #22c55e;
 }
 
-/* Kotak Kanan - Pomodoro Timer */
 .kotak-kanan {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    width: 320px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  height: fit-content;
+}
+
+.kotak-kanan > div:first-child {
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .kotak-kanan h3 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
 }
 
 .timer {
-    background: linear-gradient(135deg, #061f8f 0%, #8931e0 100%);
-    color: white;
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    padding: 50px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+  font-size: 48px;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin: 24px 0;
+  letter-spacing: 2px;
+}
+
+.pomodoro-btn,
+.pomodoro-btn1,
+.pomodoro-btn2 {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  margin-top: 8px;
 }
 
 .pomodoro-btn {
-    width: 48%;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    text-transform: capitalize;
-}
-
-.pomodoro-btn {
-    background:linear-gradient(135deg, #4CAF50 0%, green 100%) ;
-    color: white;
-    margin-right: 4%;
-    margin-top: 4%;
-    margin-bottom: 4%;
-}
-
-.pomodoro-btn:hover {
-    background: #45a049;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
-
+  background:linear-gradient(135deg,rgb(50, 108, 50) 0% , #22c55e 100%) ;
+  color: white;
 }
 
 .pomodoro-btn1 {
-    width: 48%;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    text-transform: capitalize;
-}
-.pomodoro-btn1 {
-    background:linear-gradient(135deg, #f44336 0%, #a30827 100%  ) ;
-    color: white;
-    margin-top: 4%;
-    margin-bottom: 4%;
-}
-
-.pomodoro-btn1:hover {
-    background: #da190b;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+  background:linear-gradient(135deg,rgb(198, 130, 4) 0% ,#f59e0b 100%) ;
+  color: white;
 }
 
 .pomodoro-btn2 {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    text-transform: capitalize;
-}
-.pomodoro-btn2 {
-    background: linear-gradient(100deg,#4CAF50 0% , green 100%) ;
-    color: white;
-    margin-right: 4%;
-    margin-top: 4%;
-    margin-bottom: 4%;
+  background: linear-gradient(135deg,rgb(50, 108, 50) 0% , #22c55e 100%) ;
+  color: white;
 }
 
+.pomodoro-btn:hover,
+.pomodoro-btn1:hover,
 .pomodoro-btn2:hover {
-    background: #4CAF50;
-    transform: translateY(-2px);
-    box-shadow: 2 5px 15px rgba(76, 175, 80, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .kotak-kiri,
-    .kotak-kanan {
-        width: 100%;
-    }
+.pomodoro-btn:active,
+.pomodoro-btn1:active,
+.pomodoro-btn2:active {
+  transform: translateY(0);
 }
 
-/* Scrollbar Styling untuk Sidebar */
-.kotak-kiri::-webkit-scrollbar {
-    width: 6px;
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .kotak-kiri,
+  .kotak-kanan {
+    display: none;
+  }
 }
 
-.kotak-kiri::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
 
-.kotak-kiri::-webkit-scrollbar-thumb {
-    background: #667eea;
-    border-radius: 10px;
-}
+  .kotak-tengah {
+    padding: 20px;
+  }
 
-.kotak-kiri::-webkit-scrollbar-thumb:hover {
-    background: #764ba2;
-}
+  .kotak-tengah h1 {
+    font-size: 24px;
+  }
 
-/* Scrollbar Styling untuk Main Content */
-.kotak-tengah::-webkit-scrollbar {
-    width: 8px;
-}
+  .kotak-tengah > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.kotak-tengah::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.kotak-tengah::-webkit-scrollbar-thumb {
-    background: #667eea;
-    border-radius: 10px;
-}
-
-.kotak-tengah::-webkit-scrollbar-thumb:hover {
-    background: #764ba2;
+  .view-btn,
+  .new-task-btn {
+    margin-left: 0;
+    width: 100%;
+  }
 }
