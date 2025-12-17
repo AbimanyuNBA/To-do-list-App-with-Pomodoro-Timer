@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App To Do List</title>
-    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="container">
         <div class="kotak-kiri">
             <input type="text" placeholder="Search">
             <h4>Private</h4>
-            <ul class="list">
+            <ul id="list">
                 <li>Home</li>
                 <li>Completed</li>
                 <li>Today</li>
@@ -21,25 +18,16 @@
                 <li>Work</li>
                 <li>Create new list</li>
             </ul>
-            <h4 class="list">Workspace</h4>
-            <ul class="list">
-                <li>My Startup</li>
-                <li>Freelance Clients</li>
-                <li>Collaborations</li>
-                <li>Create new workspace</li>
-            </ul>
-            <p class="">Settings</p>
-            <p class="">Sign Up</p>
+            <p id="settings">Settings</p>
         </div>
-        <div class="kotak-tengah">
+        <div id="kotak-tengah">
             <div>
                 <h1 class="">Good morning, Abimanyu!</h1>
-                <h4 class="">Wednesday, August 6, 2025</h4>
-                <button class="view-btn">View</button>
-                <button class="new-task-btn">New Task</button>
+                <button id="view-btn">View</button>
+                <button id="new-task-btn">New Task</button>
             </div>
             <div>
-                <h3 class="">My Task</h3>
+                <h3 id="task">My Task</h3>
 
                 <label>
                     <input type="checkbox">
@@ -47,31 +35,29 @@
                     <input type="checkbox">
                     <span>Aljabar Linear</span>
                 </label>
-                <button class="taskBtn"> + Add task</button>
+                <button id="taskBtn">Add task</button>
             </div>
-            <div>
-                <h3 class="">Team</h3>
+             <div>
+                <h3 id="team">Team</h3>
                 <label>
                     <input type="checkbox">
                     <span>Apa aja</span>
                     <input type="checkbox">
                     <span>Apa aja</span>
                 </label>
-                <button class="taskBtn"> + Add task</button>
+                <button id="taskBtn">Add task</button>
             </div>
         </div>
-        <div class="kotak-kanan">
+        <div id="kotak-kanan">
             <div">
-                <h3 class="">Pomodoro Timer</h3>
+                <h3 id="">Pomodoro Timer</h3>
                 <div class="timer" id="time">
                     25:00
                 </div>
-                <button class="pomodoro-btn">Start</button>
-                <button class="pomodoro-btn1">Pause</button>
-                <button class="pomodoro-btn2">Save</button>
+                <button id="pomodoro-btn">start</button>
+                <button id="pomodoro-btn">Pause</button>
+            </div>
         </div>
     </div>
-    </div>
 </body>
-
 </html>
