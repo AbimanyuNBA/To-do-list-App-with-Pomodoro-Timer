@@ -21,7 +21,7 @@
  }
  .header h1 {
      font-size: 32px;
-     color: #10b981;
+     color:#10b981;
      margin-bottom: 8px;
  }
  .date {
@@ -58,7 +58,7 @@
  }
  .btn {
      padding: 8px 16px;
-     background: #10b981;
+     background:linear-gradient(135deg, #10b981 0% , #059669 100%);
      color: white;
      border: none;
      border-radius: 6px;
@@ -69,7 +69,7 @@
      gap: 6px;
  }
  .btn:hover {
-     background: #059669;
+     background: #03825a;
  }
  /* Task List */
  .task-list {
@@ -166,15 +166,15 @@
      cursor: pointer;
  }
  .timer-btn.play {
-     background: #10b981;
+     background:linear-gradient(135deg,  #10b981 0%, #065c41 100%);
      color: white;
  }
  .timer-btn.pause {
-     background: #f59e0b;
+     background:linear-gradient(135deg, #f59e0b 0%, #9f690d 100%) ;
      color: white;
  }
  .timer-btn.reset {
-     background: #6b7280;
+     background:linear-gradient(135deg,#6b7280 0%,#3a3e46 100%) ;
      color: white;
  }
  .timer-inputs {
@@ -256,10 +256,10 @@
      margin-top: 24px;
  }
  .btn-cancel {
-     background: #6b7280;
+     background:linear-gradient(135deg,#6b7280 0%, #3a3e46 100%) ;
      color: white;
  }
  .btn-save {
-     background: #10b981;
+     background:linear-gradient(135deg, #10b981 0%, #065c41 100%);
      color: white;
  }
