@@ -25,7 +25,7 @@ const timerResetBtn = document.getElementById('timer-reset');
 const minutesInput = document.getElementById('minutes-input');
 const secondsInput = document.getElementById('seconds-input');
 
-// Fungsi inisialisasi aplikasi
+// Fungsi init aplikasi
 function initApp() {
     renderTasks();          // Tampilkan semua tugas
     updateTimerDisplay();   // Tampilkan timer awal
@@ -148,7 +148,7 @@ function startTimer() {
     }, 1000);
 }
 
-// Fungsi untuk menjeda timer
+// Fungsi untuk pause timer
 function pauseTimer() {
     clearInterval(timerInterval); // Stop timer
     isTimerRunning = false; // Set status timer berhenti
@@ -180,7 +180,7 @@ function setTimerFromInput() {
     updateTimerDisplay(); // Update tampilan
 }
 
-// ==================== EVENT LISTENERS ====================
+//  EVENT LISTENERS 
 
 // Fungsi untuk setup semua event listener
 function setupEventListeners() {
@@ -226,7 +226,7 @@ function setupEventListeners() {
     minutesInput.addEventListener('change', setTimerFromInput);
     secondsInput.addEventListener('change', setTimerFromInput);
     
-    // Klik pada display timer untuk set input
+    // Klik display timer untuk set input
     timerDisplayEl.addEventListener('click', () => {
         const minutes = Math.floor(timerSeconds / 60);
         const seconds = timerSeconds % 60;
@@ -235,7 +235,4 @@ function setupEventListeners() {
     });
 }
 
-//  MULAI APLIKASI 
-
-// Jalankan aplikasi saat DOM sudah selesai dimuat
 document.addEventListener('DOMContentLoaded', initApp);
