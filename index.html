@@ -1,93 +1,53 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Tugas</title>
+    <title>Todo + Timer</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Header -->
+
+<div class="container">
     <div class="header">
         <h1>Daftar Tugas</h1>
-        <!-- <p class="date" id="current-date"></p> -->
     </div>
-    <div class="container">
-        <!-- Main Layout -->
-        <div class="main-layout">
-            <!-- To-Do List Section -->
-            <div class="todo-section">
-                <div class="section-title">
-                    <h2>Tugas Saya</h2>
-                    <button class="btn" id="new-task-btn">
-                        <span>+</span> Tugas Baru
-                    </button>
-                </div>
 
-                <div class="task-list" id="task-list">
-                    <!-- Tasks will appear here -->
-                    <div class="no-tasks">
-                        Belum ada tugas. Klik "Tugas Baru" untuk menambahkan tugas pertama!
-                    </div>
-                </div>
+    <div class="main-layout">
+
+        <div class="todo-section">
+            <div class="section-title">
+                <h2>To Do List</h2>
             </div>
 
-            <!-- Timer Section -->
-            <div class="timer-section">
-                <h2 style="margin-bottom: 20px;">Timer Pomodoro</h2>
-                <div class="timer-display" id="timer-display">25:00</div>
+            <div style="display:flex; gap:10px; margin-bottom:16px">
+                <input 
+                    id="task-text"
+                    type="text"
+                    placeholder="Tulis tugas..."
+                    style="flex:1;padding:10px;border:1px solid #d1d5db;border-radius:6px"
+                >
+                <button id="save-task" class="btn">Tambah</button>
+            </div>
 
-                <div class="timer-controls">
-                    <button class="timer-btn play" id="timer-play">▶ Mulai</button>
-                    <button class="timer-btn pause" id="timer-pause" style="display: none;">⏸ Jeda</button>
-                    <button class="timer-btn reset" id="timer-reset">↻ Reset</button>
-                </div>
+            <div id="task-list" class="task-list"></div>
+        </div>
 
-                <div class="timer-inputs">
-                    <input type="number" class="timer-input" id="minutes-input" placeholder="Menit" value="25" min="1"
-                        max="120">
-                    <span>:</span>
-                    <input type="number" class="timer-input" id="seconds-input" placeholder="Detik" value="0" min="0"
-                        max="59">
-                </div>
+        <div class="timer-section">
+            <div class="section-title">
+                <h2>Timer</h2>
+            </div>
+
+            <div id="timer-display" class="timer-display">25:00</div>
+
+            <div class="timer-controls">
+                <button id="timer-play" class="timer-btn play">Start</button>
+                <button id="timer-pause" class="timer-btn pause">Pause</button>
+                <button id="timer-reset" class="timer-btn reset">Reset</button>
             </div>
         </div>
+
     </div>
 
-    <!-- Task Modal -->
-    <div class="modal" id="task-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modal-title">Tugas Baru</h3>
-                <span class="modal-close" id="close-modal">×</span>
-            </div>
-
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="task-text">Deskripsi Tugas</label>
-                    <input type="text" id="task-text" placeholder="Apa yang perlu Anda lakukan?">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="start-time">Waktu Mulai</label>
-                        <input type="time" id="start-time" value="09:00">
-                    </div>
-                    <div class="form-group">
-                        <label for="end-time">Waktu Selesai</label>
-                        <input type="time" id="end-time" value="10:00">
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <button class="btn btn-cancel" id="cancel-task">Batal</button>
-                <button class="btn btn-save" id="save-task">Simpan Tugas</button>
-            </div>
-        </div>
-    </div>
     <footer class="footer">
         <p><strong>@ To Do List App With Pomodoro Timer</strong></p>
         <p>Dibuat oleh Kelompok 9 <br>
@@ -96,7 +56,9 @@
         </p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
 
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
